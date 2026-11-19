@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dyklqsm6d4ndv"]
+
+[ext_resource type="Script" uid="uid://dv3q1tcprswxe" path="res://Scripts/Minigames/memo_shuffle.gd" id="1_vg4ee"]
+[ext_resource type="Texture2D" uid="uid://8rohno2wg28" path="res://Sprites/Individual/UI/blackout.png" id="2_guw5a"]
+[ext_resource type="Texture2D" uid="uid://d0wld18v8aydc" path="res://Sprites/Individual/UI/minigame_background.png" id="3_m3a4s"]
+
+[node name="Memo" type="Node2D" unique_id=2116466848]
+script = ExtResource("1_vg4ee")
+
+[node name="Blackout" type="Sprite2D" parent="." unique_id=530117534]
+texture = ExtResource("2_guw5a")
+
+[node name="MinigameBackground" type="Sprite2D" parent="." unique_id=371564214]
+texture = ExtResource("3_m3a4s")
