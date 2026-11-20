@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bt1wywf4puki1"]
 
 [ext_resource type="Texture2D" uid="uid://bhcegbb2pbwu" path="res://Sprites/Individual/World/gear1_alpha.png" id="1_rr4ch"]
-[ext_resource type="Script" uid="uid://c7gu0uv1llvr7" path="res://Scripts/Bodies/routePoint.gd" id="2_s5tqs"]
+[ext_resource type="Script" uid="uid://c7gu0uv1llvr7" path="res://Scripts/Bodies/route_point.gd" id="2_s5tqs"]
+[ext_resource type="PackedScene" uid="uid://dyklqsm6d4ndv" path="res://Scenes/Minigames/memo.tscn" id="3_5ghk7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kuqfg"]
 radius = 73.0
@@ -16,6 +17,7 @@ texture = ExtResource("1_rr4ch")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=810246530]
 script = ExtResource("2_s5tqs")
+memoScene = ExtResource("3_5ghk7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=623440427]
 shape = SubResource("CircleShape2D_kuqfg")

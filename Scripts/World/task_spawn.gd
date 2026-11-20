@@ -11,6 +11,13 @@ var isTaskHere := [false, false, false, false, false, false]
 func _ready():
 	timer.timeout.connect(_task_spawn)
 
+@warning_ignore("unused_parameter")
+func _physics_process(delta):
+	if SignalBus.pause:
+		timer.paused = true
+	elif timer.paused:
+		timer.paused = false
+
 func _task_spawn():
 	is_player_near()
 	if 1.0 in weights:

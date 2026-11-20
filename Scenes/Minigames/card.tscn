@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://caxpnn3xdqbcw"]
+
+[ext_resource type="Script" uid="uid://cg15nbt7ypyvr" path="res://Scripts/Minigames/memo_card.gd" id="1_qo4hk"]
+[ext_resource type="Texture2D" uid="uid://c7jil2cp8tc8p" path="res://Sprites/Individual/Cards/glasses_card.png" id="2_sbvap"]
+[ext_resource type="Texture2D" uid="uid://7boqs7xaw2ip" path="res://Sprites/Individual/Cards/sand_clock_card.png" id="3_xg5rd"]
+[ext_resource type="Texture2D" uid="uid://b8b2ojhfipoto" path="res://Sprites/Individual/Cards/scroll_card.png" id="4_5kger"]
+[ext_resource type="Texture2D" uid="uid://di34t84hpehnm" path="res://Sprites/Individual/Cards/wall_clock_card.png" id="5_vn0yf"]
+[ext_resource type="Texture2D" uid="uid://b5jeyjxcl5rlg" path="res://Sprites/Individual/Cards/gearwheel_card.png" id="6_j2nk7"]
+[ext_resource type="Texture2D" uid="uid://bc2a5uy2ageu5" path="res://Sprites/Individual/Cards/top_card_side.png" id="7_2e0j5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_81klu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sbvap")
+}],
+"loop": 1,
+"name": &"bottom_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xg5rd")
+}],
+"loop": 1,
+"name": &"bottom_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_5kger")
+}],
+"loop": 1,
+"name": &"bottom_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_vn0yf")
+}],
+"loop": 1,
+"name": &"bottom_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_j2nk7")
+}],
+"loop": 1,
+"name": &"bottom_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_2e0j5")
+}],
+"loop": 1,
+"name": &"top",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kuqfg"]
+size = Vector2(100, 160)
+
+[node name="Card" type="Area2D" unique_id=307322713]
+script = ExtResource("1_qo4hk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=858697069]
+sprite_frames = SubResource("SpriteFrames_81klu")
+animation = &"top"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=853054983]
+shape = SubResource("RectangleShape2D_kuqfg")
+debug_color = Color(1.9492954e-06, 0.6481564, 0.19924584, 0.41960785)

@@ -8,6 +8,7 @@ func _ready():
 	#Слушаем шину
 	SignalBus.task_clicked.connect(_on_task_clicked)
 
+@warning_ignore("unused_parameter")
 func _physics_process(delta: float):
 	if targets:
 		if (int(global_position.x) == int(targets[0].x) and int(global_position.y) == int(targets[0].y)):
@@ -28,7 +29,7 @@ func _on_task_clicked(coords: Vector2, isLadder: bool):
 		elif coords.x == -int(global_position.x):
 			targets[0] = Vector2(global_position.x, \
 			0.0 if int(global_position.y) >= coords.y and int(global_position.y) != 0 \
-			or int(global_position.y) == 0 else -500)
+			or int(global_position.y) == 0 else -500.0)
 			targets[1] = Vector2(coords.x, targets[0].y)
 			targets.append(Vector2(coords.x, 0.0 if targets[1].y == -500.0 else -500.0))
 	

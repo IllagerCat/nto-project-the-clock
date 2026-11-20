@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvnmawtnyj53n"
-path="res://.godot/imported/pocket_watch_card.png-7e9fd4610c2271c9a317c14d9dcaf3e7.ctex"
+uid="uid://cci5drntvub0v"
+path="res://.godot/imported/exit_button.png-5d965ed629c59391d47e1374651e7255.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Individual/Cards/pocket_watch_card.png"
-dest_files=["res://.godot/imported/pocket_watch_card.png-7e9fd4610c2271c9a317c14d9dcaf3e7.ctex"]
+source_file="res://Sprites/Individual/Menu/exit_button.png"
+dest_files=["res://.godot/imported/exit_button.png-5d965ed629c59391d47e1374651e7255.ctex"]
 
 [params]
 

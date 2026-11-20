@@ -2,13 +2,27 @@
 
 [ext_resource type="Script" uid="uid://dm6bay60jaost" path="res://Scripts/Architectury/camera.gd" id="1_m3l88"]
 [ext_resource type="Texture2D" uid="uid://8yx2hmdiysup" path="res://Sprites/Individual/World/platform_alpha.png" id="3_m3l88"]
-[ext_resource type="Script" uid="uid://c7gu0uv1llvr7" path="res://Scripts/Bodies/routePoint.gd" id="4_m3l88"]
+[ext_resource type="Script" uid="uid://c7gu0uv1llvr7" path="res://Scripts/Bodies/route_point.gd" id="4_m3l88"]
 [ext_resource type="Texture2D" uid="uid://bfpa15ldomouj" path="res://Sprites/Individual/World/ladder_alpha.png" id="4_ty3ai"]
 [ext_resource type="Script" uid="uid://b6i457ipk7rce" path="res://Scripts/Bodies/player.gd" id="6_m3l88"]
 [ext_resource type="Texture2D" uid="uid://bvn56f5of8d0l" path="res://Sprites/Individual/World/ladder_on_cover_alpha.png" id="6_ty3ai"]
 [ext_resource type="Texture2D" uid="uid://bwojsmgqk2qb1" path="res://Sprites/Individual/Bodies/player_alpha.png" id="7_ty3ai"]
 [ext_resource type="Script" uid="uid://1pl17jarxshr" path="res://Scripts/World/task_spawn.gd" id="9_dwt6l"]
-[ext_resource type="PackedScene" uid="uid://bt1wywf4puki1" path="res://Scenes/World/point.tscn" id="9_px5sh"]
+[ext_resource type="PackedScene" uid="uid://bt1wywf4puki1" path="res://Scenes/UI/point.tscn" id="9_px5sh"]
+
+[sub_resource type="GDScript" id="GDScript_hclda"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _physics_process(delta: float) -> void:
+	pass
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kuqfg"]
 animations = [{
@@ -66,6 +80,7 @@ animations = [{
 }]
 
 [node name="Clock" type="Node2D" unique_id=1104500618]
+script = SubResource("GDScript_hclda")
 
 [node name="Camera" type="Camera2D" parent="." unique_id=1931643835]
 position = Vector2(0, -70)
